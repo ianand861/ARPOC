@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="njV-Zt-o80">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Mzs-It-OMs">
+            <objects>
+                <navigationController id="njV-Zt-o80" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jHy-fH-I8Q">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.11764705882352941" green="0.41176470588235292" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BBg-qk-313"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qtV-Ge-RAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-770" y="133"/>
+        </scene>
+        <!--AR-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="DriftWatchAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYp-W4-wj6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvh-y3-Xy4">
+                                        <rect key="frame" x="88" y="330" width="200" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.98823529409999999" green="0.84705882349999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="Show Driftwatches"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="showDriftWatches:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zn5-L8-LWJ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Start, Hold the device with the screen facing towards you. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2N-9j-hzJ">
+                                        <rect key="frame" x="8" y="30" width="359" height="71"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="71" id="Bp0-o7-17R"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17.5"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="JCg-PV-8JZ">
+                                        <rect key="frame" x="169" y="283" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1184227243065834" green="0.41181698441505432" blue="0.084851302206516266" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="R2N-9j-hzJ" firstAttribute="leading" secondItem="AYp-W4-wj6" secondAttribute="leading" constant="8" id="LLv-ho-UaE"/>
+                                    <constraint firstItem="JCg-PV-8JZ" firstAttribute="centerY" secondItem="AYp-W4-wj6" secondAttribute="centerY" id="iLA-Mj-4IY"/>
+                                    <constraint firstItem="JCg-PV-8JZ" firstAttribute="centerX" secondItem="AYp-W4-wj6" secondAttribute="centerX" id="mxy-GQ-bzX"/>
+                                    <constraint firstAttribute="trailing" secondItem="R2N-9j-hzJ" secondAttribute="trailing" constant="8" id="wdX-Em-8ET"/>
+                                    <constraint firstItem="R2N-9j-hzJ" firstAttribute="top" secondItem="AYp-W4-wj6" secondAttribute="top" constant="30" id="zsj-TV-ryT"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide_Image.png" translatesAutoresizingMaskIntoConstraints="NO" id="gDP-Az-Y2c">
+                                <rect key="frame" x="42" y="186" width="291" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="XYD-lx-aWa"/>
+                                    <constraint firstAttribute="width" constant="291" id="jYr-rA-vgC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="AYp-W4-wj6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4R5-qn-PIS"/>
+                            <constraint firstItem="gDP-Az-Y2c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="122" id="67O-YW-KoM"/>
+                            <constraint firstItem="AYp-W4-wj6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CEV-nT-3Xr"/>
+                            <constraint firstItem="gDP-Az-Y2c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vg4-P2-w1N"/>
+                            <constraint firstItem="AYp-W4-wj6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gg8-5w-MKP"/>
+                            <constraint firstItem="AYp-W4-wj6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tIn-Zf-cKG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="AR" id="JCm-yI-f3e"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="JCg-PV-8JZ" id="Sfv-M7-Bw0"/>
+                        <segue destination="kj2-iN-rIQ" kind="presentation" identifier="showDriftWatches" id="psg-Oo-gLq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="8a1-MK-GwW">
+            <objects>
+                <viewController id="Epv-ZY-mln" customClass="ARViewController" customModule="DriftWatchAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <arskView key="view" contentMode="scaleToFill" id="KCp-BK-BGM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </arskView>
+                    <navigationItem key="navigationItem" title="Title" id="FCg-cL-shS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fDk-hv-8tH">
+                            <connections>
+                                <action selector="doneTapped:" destination="Epv-ZY-mln" id="BTM-ep-J5g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sceneView" destination="KCp-BK-BGM" id="4uC-x6-32Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QqT-WA-bka" sceneMemberID="firstResponder"/>
+                <barButtonItem title="Item" id="Tvp-IE-5S8"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4aE-xw-ztt">
+            <objects>
+                <navigationController id="kj2-iN-rIQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1il-FI-Dt0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1176470588" green="0.41176470590000003" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Epv-ZY-mln" kind="relationship" relationship="rootViewController" id="Qy3-xv-hiG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ic-5P-rfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="guide_Image.png" width="674" height="426"/>
+    </resources>
+</document>

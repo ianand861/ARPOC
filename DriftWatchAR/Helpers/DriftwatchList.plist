@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>TCS</string>
+		<key>Latitude</key>
+		<real>18.513175</real>
+		<key>Longitude</key>
+		<real>73.93356799999999</real>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Season&apos;s Mall</string>
+		<key>Latitude</key>
+		<real>18.519015</real>
+		<key>Longitude</key>
+		<real>73.931905</real>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Aditi Garden</string>
+		<key>Latitude</key>
+		<real>18.515027</real>
+		<key>Longitude</key>
+		<real>73.926423</real>
+	</dict>
+</array>
+</plist>
